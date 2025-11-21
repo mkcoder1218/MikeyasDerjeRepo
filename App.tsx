@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { Projects } from './pages/Projects';
-import { About } from './pages/About';
-import { ChatWidget } from './components/ChatWidget';
-import { Language } from './types';
+import React, { useState, useEffect } from "react";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { Projects } from "./pages/Projects";
+import { About } from "./pages/About";
+import { ChatWidget } from "./components/ChatWidget";
+import { Language } from "./types";
 
 const AnimatedRoutes: React.FC<{ lang: Language }> = ({ lang }) => {
   const location = useLocation();
-
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
@@ -23,7 +27,7 @@ const AnimatedRoutes: React.FC<{ lang: Language }> = ({ lang }) => {
 };
 
 const App: React.FC = () => {
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useState<Language>("en");
 
   useEffect(() => {
     document.documentElement.lang = lang;
