@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mikeyas Derje | Full Stack Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: 'class',
@@ -26,17 +25,18 @@
                 950: '#0a0a0a',
               },
               primary: {
-                500: '#8b5cf6', // Violet
+                500: '#8b5cf6',
                 400: '#a78bfa',
               },
               secondary: {
-                500: '#06b6d4', // Cyan
+                500: '#06b6d4',
                 400: '#22d3ee',
               }
             },
             animation: {
               'spin-slow': 'spin 8s linear infinite',
               'blob': 'blob 10s infinite',
+              'gradient-x': 'gradient-x 15s ease infinite',
             },
             keyframes: {
               blob: {
@@ -44,41 +44,22 @@
                 '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                 '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                 '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              'gradient-x': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center'
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center'
+                },
               }
             }
           },
         },
       }
     </script>
-    <style>
-      /* Clean Scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-      
-      html, body {
-        height: 100%;
-        background-color: #030014; /* Darker, slightly purple-tinted black */
-        color: #e5e5e5;
-        -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
-      }
-      
-      ::selection {
-        background-color: #8b5cf6;
-        color: #ffffff;
-      }
-    </style>
   <script type="importmap">
 {
   "imports": {
@@ -97,4 +78,3 @@
     <div id="root"></div>
   </body>
 </html>
-    
