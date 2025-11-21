@@ -30,6 +30,7 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 8s linear infinite',
         'blob': 'blob 10s infinite',
+        'gradient-x': 'gradient-x 15s ease infinite',
       },
       keyframes: {
         blob: {
@@ -37,7 +38,17 @@ module.exports = {
           '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' },
-        }
+        },
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
+        },
       }
     },
   },
