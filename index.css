@@ -1,5 +1,6 @@
 /* Base Reset */
-html, body {
+html,
+body {
   height: 100%;
   background-color: #030014;
   color: #e5e5e5;
